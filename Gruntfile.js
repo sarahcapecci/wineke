@@ -1,7 +1,5 @@
 var path = require('path');
 
-var stylesheetsDir = 'css/';
-
 module.exports = function(grunt) {
 
 	grunt.initConfig({
@@ -17,7 +15,7 @@ module.exports = function(grunt) {
 					style: 'expanded'
 				},
 				files: {   // Dictionary of files
-					'dev/styles/style.css': stylesheetsDir + 'style.scss'   
+					'dep/styles/style.css': 'dev/styles/style.scss'   
 					// 'destination': 'source'
 				}
 			}
@@ -28,7 +26,7 @@ module.exports = function(grunt) {
 				cascade: true
 			},
 			single_file: {
-				src: 'dev/styles/style.css'
+				src: 'dep/styles/style.css'
 			}
 		},
 		//minifies the file and saves in dep/style folder
@@ -37,7 +35,7 @@ module.exports = function(grunt) {
 		    expand: true,
 		    cwd: 'dev/styles/',
 		    src: ['*.css', '!*.min.css'],
-		    dest: 'dep/style/',
+		    dest: 'dep/styles/',
 		    ext: '-min.css'
 		  }
 		},

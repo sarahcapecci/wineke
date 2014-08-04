@@ -1,20 +1,29 @@
 {
-  "name": "project-name",
+  "name": "Wineke-Healing",
   "version": "0.0.0",
-  "description": "project description",
+  "description": "Website for Wineke Healing",
   "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sarahcapecci/wineke.git"
+  },
   "author": "@sarahcapecci",
   "license": "ISC",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^0.7.5",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-cssmin": "~0.10.0",
-    "grunt-contrib-uglify": "~0.5.0"
-  }
+  "bugs": {
+    "url": "https://github.com/sarahcapecci/wineke/issues"
+  },
+  "homepage": "https://github.com/sarahcapecci/wineke"
 }
