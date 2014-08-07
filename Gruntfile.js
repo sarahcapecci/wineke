@@ -7,9 +7,15 @@ module.exports = function(grunt) {
 		connect: {
 			server: {
 				options: {
-					port: 8000, //run on port 9000
-					open: true, //open browser
-					directory: '../' //root-directory on server 					
+					port: 8000, //run on port 8000
+					hostname: 'localhost',
+					base: {
+				          path: 'www-root',
+				          options: {
+				            index: 'home.html'
+					      }
+					},
+					open: true //open browser
 				}
 			}
 		},
