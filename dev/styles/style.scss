@@ -7,8 +7,16 @@
 	height: 0;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,700);
+@import url(http://fonts.googleapis.com/css?family=Nobile:400,700);
+
 body, div, section, ul, li, article, main {
 	margin: 0;
+	font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+nav li, span {
+	font-family: 'Lobster Two', cursive;
 }
 
 body, html {
@@ -67,6 +75,7 @@ footer {
 	width: 30%;
 	margin: 0 auto;
 	padding: 0;
+	text-align: center;
 
 	li {
 		display: inline-block;
@@ -78,4 +87,19 @@ footer {
 			width: 100%;
 		}
 	}
+}
+
+// Form submission
+
+.error {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+.submissionMessage {
+  background-color: rgba(255,255,255, 0.2);
+  border-radius: 5px;
+  padding: 12px;
+  text-align: center;
+  display: block;
+  box-shadow: 0 0 2px white;
+  width: 60%;
 }
