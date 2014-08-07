@@ -4,6 +4,15 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		connect: {
+			server: {
+				options: {
+					port: 8000, //run on port 9000
+					open: true, //open browser
+					directory: '../' //root-directory on server 					
+				}
+			}
+		},
 		//lint my jS
 		jshint: {
 			all: 'dev/js/*.js'
@@ -54,7 +63,7 @@ module.exports = function(grunt) {
 		//watch file changes and recompile if necessary
 		watch: {
 			css: {//task
-			    files: 'dev/css/*.scss', //where to watch
+			    files: 'dev/styles/*.scss', //where to watch
 			    tasks: ['sass','autoprefixer', 'cssmin'], 
 			    options: {
 			      livereload: true
@@ -71,6 +80,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -78,6 +88,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	//default task grunt will run...
-	grunt.registerTask('default', ['jshint','sass','autoprefixer','watch']);
+	grunt.registerTask('default', ['jshint', 'connect', 'sass','autoprefixer','watch']);
 
 };

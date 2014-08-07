@@ -1,3 +1,81 @@
-body {
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+body, div, section, ul, li, article, main {
 	margin: 0;
+}
+
+body, html {
+	position: relative;
+	height: 100%;
+}
+
+.wrapper {
+	padding: 0;
+	margin: 5% auto;
+}
+
+.left-image {
+	width: 50%;
+	float: left;
+	max-height: 500px;
+	img {
+		width: 100%;
+	}
+}
+
+.right-content {
+	width: 45%;
+	float: right;
+	max-height: 500px;
+	overflow: scroll;
+	padding: 0 10px;
+}
+
+nav {
+	width: 100%;
+}
+
+.menu {
+	padding: 0;
+	margin: 0;
+	width: 80%;
+	float: right;
+
+	li {
+		display: inline-block;
+		margin: 0;
+		padding: 2%;
+		width: 15%;
+	}
+}
+
+footer {
+	width: 100%;
+	background-color: black;
+	position: absolute;
+	bottom: 0;
+}
+
+.social-media {
+	width: 30%;
+	margin: 0 auto;
+	padding: 0;
+
+	li {
+		display: inline-block;
+		width: 15px;
+		padding: 5px;
+		text-align: center;
+
+		img {
+			width: 100%;
+		}
+	}
 }
