@@ -9,12 +9,6 @@ module.exports = function(grunt) {
 				options: {
 					port: 8000, //run on port 8000
 					hostname: 'localhost',
-					base: {
-				          path: 'www-root',
-				          options: {
-				            index: 'home.html'
-					      }
-					},
 					open: true //open browser
 				}
 			}

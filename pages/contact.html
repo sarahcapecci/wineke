@@ -12,12 +12,9 @@
                 <p>You are welcome to leave me a voicemail and I will get back to you asap :)</p>
             </div>
             <form ng-submit="submitForm()" ng-controller="ContactController" novalidate>
-              <label for="name">Name</label>
-              <input type="text" name="name" ng-model="formData.name" ng-class="{'error' : errorName}">
-              <label for="email">E-mail</label>
-              <input type="email" name="email" ng-model="formData.email" ng-class="{'error' : errorEmail}">
-              <label for="message">Message</label>
-              <textarea name="message" ng-class="{'error' : errorTextarea}" ng-model="formData.message" cols="30" rows="10"></textarea>
+              <input type="text" name="name" ng-model="formData.name" ng-class="{'error' : errorName}" placeholder="Your name">
+              <input type="email" name="email" ng-model="formData.email" ng-class="{'error' : errorEmail}" placeholder="Your e-mail">
+              <textarea name="message" ng-class="{'error' : errorTextarea}" ng-model="formData.message" cols="30" rows="10" placeholder="Your message"></textarea>
               <input type="submit" value="Send!" name="submit">
               <div ng-class="{'submissionMessage' : submission}" ng-bind="submissionMessage"></div>
             </form>

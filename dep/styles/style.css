@@ -12,15 +12,51 @@
 body, div, section, ul, li, article, main {
   margin: 0;
   font-family: 'Nobile', Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
-nav li, span {
+nav li a, span {
   font-family: 'Lobster Two', cursive;
+  color: #fefefe;
+  font-size: 20px;
+}
+
+nav {
+  background-image: url("../../img/nav.png");
+  height: 70px;
+  vertical-align: middle;
+  margin-top: 70px;
+  width: 100%;
+  position: relative;
 }
 
 body, html {
-  position: relative;
   height: 100%;
+}
+
+p, .benefits {
+  color: #757575;
+  line-height: 1.2em;
+}
+
+.logo {
+  width: 200px;
+  position: absolute;
+  top: 30px;
+  left: 2%;
+}
+
+.logo-link {
+  position: absolute;
+  left: 1%;
+  top: -70px;
+  /* vertical-align: middle; */
+  background-color: white;
+  width: 200px;
+  padding: 15px;
+  border-radius: 50%;
+  height: 200px;
+  border: 3px solid lightblue;
 }
 
 .wrapper {
@@ -45,28 +81,30 @@ body, html {
   padding: 0 10px;
 }
 
-nav {
-  width: 100%;
-}
-
 .menu {
-  padding: 0;
   margin: 0;
   width: 80%;
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  vertical-align: middle;
 }
 .menu li {
   display: inline-block;
   margin: 0;
   padding: 2%;
   width: 15%;
+  text-align: center;
+}
+.menu a {
+  text-decoration: none;
 }
 
 footer {
   width: 100%;
   background-color: black;
-  position: absolute;
-  bottom: 0;
+  background-image: url("../../img/footer.jpg");
 }
 
 .social-media {
@@ -85,6 +123,57 @@ footer {
   width: 100%;
 }
 
+input, textarea {
+  border: 2px solid lightblue;
+  display: block;
+  padding: 5px;
+  width: 60%;
+  margin: 2% 0;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border: 2px solid #63c4e4;
+}
+
+input[type=submit] {
+  width: 40%;
+  color: white;
+  background-color: lightblue;
+  border-radius: 2px;
+  border: none;
+  margin: 1% 0;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  cursor: pointer;
+}
+input[type=submit]:focus {
+  outline: none;
+  font-weight: bold;
+}
+input[type=submit]:hover {
+  background-color: #63c4e4;
+}
+
+::-webkit-input-placeholder {
+  color: lightblue;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: lightblue;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: lightblue;
+}
+
+:-ms-input-placeholder {
+  color: lightblue;
+}
+
 .error {
   background-color: rgba(255, 0, 0, 0.2);
 }
@@ -97,4 +186,46 @@ footer {
   display: block;
   box-shadow: 0 0 2px white;
   width: 60%;
+}
+
+@media all and (max-width: 400px) {
+  nav {
+    background-image: none;
+  }
+
+  .logo-link {
+    display: inline-block;
+    margin: 1%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+  }
+
+  .logo {
+    position: relative;
+    width: 100%;
+  }
+
+  .menu {
+    position: relative;
+    background-image: url("../../img/nav.png");
+    width: 100%;
+  }
+  .menu li {
+    width: 18%;
+    padding: 0.5%;
+  }
+  .menu li a {
+    padding: 1.5%;
+  }
+
+  .left-image {
+    display: none;
+  }
+
+  .right-content {
+    width: 90%;
+    overflow: auto;
+  }
 }
