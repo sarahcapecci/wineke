@@ -32,9 +32,9 @@ nav li a, span {
 
 nav {
 	background-image: url('../../img/nav.png');
-	height: 70px;
+	min-height: 70px;
 	vertical-align: middle;
-	margin-top: 70px;
+	margin: 70px 0;
 	width: 100%;
 	position: relative;
 }
@@ -70,20 +70,21 @@ p, .benefits {
 
 .wrapper {
 	padding: 0;
-	margin: 5% auto;
+	margin: 0 auto;
 }
 
 .left-image {
-	width: 50%;
+	width: 55%;
 	float: left;
-	max-height: 500px;
+	max-height: 100%;
 	img {
 		width: 100%;
+		height: 100%;
 	}
 }
 
 .right-content {
-	width: 45%;
+	width: 40%;
 	float: right;
 	max-height: 500px;
 	overflow: scroll;
@@ -120,21 +121,19 @@ p, .benefits {
 
 footer {
 	width: 100%;
-	background-color: black;
-	// position: absolute;
-	// bottom: 0;
+	min-height: 50px;
 	background-image: url('../../img/footer.jpg');
 }
 
 .social-media {
 	width: 30%;
 	margin: 0 auto;
-	padding: 0;
+	padding: 15px;
 	text-align: center;
 
 	li {
 		display: inline-block;
-		width: 15px;
+		width: 20px;
 		padding: 5px;
 		text-align: center;
 
@@ -215,13 +214,15 @@ input[type=submit] {
 @media all and (max-width: 400px) {
 	nav {
 		background-image: none;
+		margin: 0;
 	}
 	
 	.logo-link {
-		display: inline-block;
-		margin: 1%;
+		display: none;
+		margin: 10px auto 5px auto;
 		width: 100px;
 		height: 100px;
+		top: 2px;
 		position: relative;
 		text-align: center;
 	}
