@@ -2,8 +2,12 @@ $blue: #6fcbd2;
 $white: #ffffff;
 $text: rgb(117, 117, 117);
 $tag-color: rgb(254, 254, 254);
-$light-blue: lightblue;
+$light-blue: #6fcbd2;
 $darker-blue: rgb(99, 196, 228);
+$light-purple: #bec3db;
+$light-blue-scroll: #88bfd1;
+$darker-blue-scroll: #5f8895;
+$box-text: #fcfcfe;
 
 
 .clearfix:after {
@@ -34,7 +38,7 @@ nav {
 	background-image: url('../../img/nav.png');
 	min-height: 70px;
 	vertical-align: middle;
-	margin: 70px 0;
+	margin: 70px 0 40px 0;
 	width: 100%;
 	position: relative;
 }
@@ -43,29 +47,42 @@ body, html {
 	height: 100%;
 }
 
+.box-message {
+	background-color: $light-purple;
+	color: $box-text;
+	padding: 20px 30px;
+	font-size: 18px;
+	letter-spacing: 1px;
+	max-width: 250px;
+	position: absolute;
+	bottom: 10px;
+	left: 25%;
+}
+
+.blue {
+	background-color: $light-blue;
+}
+
 p, .benefits {
 	color: $text;
 	line-height: 1.2em;
 }
 
 .logo {
-	width: 200px;
-	position: absolute;
-	top: 30px;
-	left: 2%;
+	width: 220px;
 }
 
 .logo-link {
 	position: absolute;
-	left: 1%;
-	top: -70px;
+	left: 2%;
+	top: -80px;
 	/* vertical-align: middle; */
-	background-color: white;
-	width: 200px;
 	padding: 15px;
-	border-radius: 50%;
-	height: 200px;
-	border: 3px solid lightblue;
+	z-index: 1000;
+}
+
+.small-logo {
+	display: none;
 }
 
 .wrapper {
@@ -77,24 +94,41 @@ p, .benefits {
 	width: 55%;
 	float: left;
 	max-height: 100%;
+	position: relative;
 	img {
 		width: 100%;
-		height: 100%;
+		height: 100%;	
 	}
 }
 
 .right-content {
 	width: 40%;
 	float: right;
-	max-height: 500px;
-	overflow: scroll;
+	max-height: 550px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	padding: 0 10px;
+	margin: 0 1%;
 }
 
+//scrollbar style
+
+::-webkit-scrollbar {
+      width: 10px;
+} /* this targets the default scrollbar  */
+
+::-webkit-scrollbar-track {
+      background-color: $light-blue-scroll;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: $darker-blue-scroll; 
+} /* this will style the thumb, ignoring the track */
+ 
 
 .menu {
 	margin: 0;
-	width: 80%;
+	width: 75%;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -143,15 +177,22 @@ footer {
 	}
 }
 
-// Form submission
+#SkypeButton_Call_winekehealing_1_paraElement {
+	img {
+		margin: 0;
+	}
+}
+
+// Contact form styling
 form {
+	margin: 5% 0;
 
 }
 
 input, textarea {
-	border: 2px solid $light-blue;
+	border: 3px solid $light-blue;
 	display: block;
-	padding: 5px;
+	padding: 8px;
 	width: 60%;
 	margin: 2% 0;
 	transition: all 0.5s ease;
@@ -163,7 +204,8 @@ input, textarea {
 }
 
 input[type=submit] {
-	width: 40%;
+	width: 25%;
+	padding: 10px;
 	color: white;
 	background-color: $light-blue;
 	border-radius: 2px;
@@ -184,23 +226,28 @@ input[type=submit] {
 
 ::-webkit-input-placeholder {
    color: $light-blue;
+   font-size: 12px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: $light-blue;  
+   color: $light-blue; 
+   font-size: 12px; 
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color: $light-blue;  
+   font-size: 12px;
 }
 
 :-ms-input-placeholder {  
-   color: $light-blue;  
+   color: $light-blue;
+   font-size: 12px;  
 }
 
 .error {
   background-color: rgba(255, 0, 0, 0.2);
 }
+
 .submissionMessage {
   background-color: rgba(255,255,255, 0.2);
   border-radius: 5px;
@@ -214,22 +261,35 @@ input[type=submit] {
 @media all and (max-width: 400px) {
 	nav {
 		background-image: none;
-		margin: 0;
+		max-height: 100px;
+		margin: 0 0 5% 0;
 	}
 	
 	.logo-link {
 		display: none;
-		margin: 10px auto 5px auto;
+		position: fixed;
 		width: 100px;
-		height: 100px;
-		top: 2px;
-		position: relative;
+		top: 5px;
+		margin: 10px auto 5px auto;
 		text-align: center;
 	}
 
 	.logo {
 		position: relative;
 		width: 100%;
+	}
+
+	.small-logo {
+		display: block;
+		width: 70px;
+		margin: 0 5px;
+		position: absolute;
+		right: 5px;
+		top: 0;
+
+		img {
+			width: 100%;
+		}
 	}
 	
 	.menu {
@@ -238,15 +298,22 @@ input[type=submit] {
 		width: 100%;
 
 		li {
-			width: 18%;
-			padding: 0.5%;
+			padding: 3px 2px;
+			margin: 4px 0;
 			a {
 				padding: 1.5%;
+				font-size: 16px;
 			}
+		}
+
+		li.top {
+			width: 31%;
+		}
+		li.bottom {
+			width: 45%;
 		}
 		
 	}
-
 
 	.left-image {
 		display: none;
@@ -255,6 +322,15 @@ input[type=submit] {
 	.right-content {
 		width: 90%;
 		overflow: auto;
+		position: relative;
+
+		h2 {
+			display: inline-block;
+		}	
+	}
+
+	.social-media {
+		width: 80%;
 	}
 
 }

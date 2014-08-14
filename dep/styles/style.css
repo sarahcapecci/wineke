@@ -25,7 +25,7 @@ nav {
   background-image: url("../../img/nav.png");
   min-height: 70px;
   vertical-align: middle;
-  margin: 70px 0;
+  margin: 70px 0 40px 0;
   width: 100%;
   position: relative;
 }
@@ -34,29 +34,42 @@ body, html {
   height: 100%;
 }
 
+.box-message {
+  background-color: #bec3db;
+  color: #fcfcfe;
+  padding: 20px 30px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  max-width: 250px;
+  position: absolute;
+  bottom: 10px;
+  left: 25%;
+}
+
+.blue {
+  background-color: #6fcbd2;
+}
+
 p, .benefits {
   color: #757575;
   line-height: 1.2em;
 }
 
 .logo {
-  width: 200px;
-  position: absolute;
-  top: 30px;
-  left: 2%;
+  width: 220px;
 }
 
 .logo-link {
   position: absolute;
-  left: 1%;
-  top: -70px;
+  left: 2%;
+  top: -80px;
   /* vertical-align: middle; */
-  background-color: white;
-  width: 200px;
   padding: 15px;
-  border-radius: 50%;
-  height: 200px;
-  border: 3px solid lightblue;
+  z-index: 1000;
+}
+
+.small-logo {
+  display: none;
 }
 
 .wrapper {
@@ -68,6 +81,7 @@ p, .benefits {
   width: 55%;
   float: left;
   max-height: 100%;
+  position: relative;
 }
 .left-image img {
   width: 100%;
@@ -77,14 +91,31 @@ p, .benefits {
 .right-content {
   width: 40%;
   float: right;
-  max-height: 500px;
-  overflow: scroll;
+  max-height: 550px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding: 0 10px;
+  margin: 0 1%;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* this targets the default scrollbar  */
+::-webkit-scrollbar-track {
+  background-color: #88bfd1;
+}
+
+/* the new scrollbar will have a flat appearance with the set background color */
+::-webkit-scrollbar-thumb {
+  background-color: #5f8895;
+}
+
+/* this will style the thumb, ignoring the track */
 .menu {
   margin: 0;
-  width: 80%;
+  width: 75%;
   position: absolute;
   right: 0;
   top: 0;
@@ -124,10 +155,18 @@ footer {
   width: 100%;
 }
 
+#SkypeButton_Call_winekehealing_1_paraElement img {
+  margin: 0;
+}
+
+form {
+  margin: 5% 0;
+}
+
 input, textarea {
-  border: 2px solid lightblue;
+  border: 3px solid #6fcbd2;
   display: block;
-  padding: 5px;
+  padding: 8px;
   width: 60%;
   margin: 2% 0;
   -webkit-transition: all 0.5s ease;
@@ -139,9 +178,10 @@ input:focus, textarea:focus {
 }
 
 input[type=submit] {
-  width: 40%;
+  width: 25%;
+  padding: 10px;
   color: white;
-  background-color: lightblue;
+  background-color: #6fcbd2;
   border-radius: 2px;
   border: none;
   margin: 1% 0;
@@ -158,21 +198,25 @@ input[type=submit]:hover {
 }
 
 ::-webkit-input-placeholder {
-  color: lightblue;
+  color: #6fcbd2;
+  font-size: 12px;
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: lightblue;
+  color: #6fcbd2;
+  font-size: 12px;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: lightblue;
+  color: #6fcbd2;
+  font-size: 12px;
 }
 
 :-ms-input-placeholder {
-  color: lightblue;
+  color: #6fcbd2;
+  font-size: 12px;
 }
 
 .error {
@@ -192,21 +236,33 @@ input[type=submit]:hover {
 @media all and (max-width: 400px) {
   nav {
     background-image: none;
-    margin: 0;
+    max-height: 100px;
+    margin: 0 0 5% 0;
   }
 
   .logo-link {
     display: none;
-    margin: 10px auto 5px auto;
+    position: fixed;
     width: 100px;
-    height: 100px;
-    top: 2px;
-    position: relative;
+    top: 5px;
+    margin: 10px auto 5px auto;
     text-align: center;
   }
 
   .logo {
     position: relative;
+    width: 100%;
+  }
+
+  .small-logo {
+    display: block;
+    width: 70px;
+    margin: 0 5px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+  }
+  .small-logo img {
     width: 100%;
   }
 
@@ -216,11 +272,18 @@ input[type=submit]:hover {
     width: 100%;
   }
   .menu li {
-    width: 18%;
-    padding: 0.5%;
+    padding: 3px 2px;
+    margin: 4px 0;
   }
   .menu li a {
     padding: 1.5%;
+    font-size: 16px;
+  }
+  .menu li.top {
+    width: 31%;
+  }
+  .menu li.bottom {
+    width: 45%;
   }
 
   .left-image {
@@ -230,5 +293,13 @@ input[type=submit]:hover {
   .right-content {
     width: 90%;
     overflow: auto;
+    position: relative;
+  }
+  .right-content h2 {
+    display: inline-block;
+  }
+
+  .social-media {
+    width: 80%;
   }
 }
