@@ -144,11 +144,12 @@ p, .benefits {
 	}
 	a {
 		text-decoration: none;
+		transition: all 0.3s ease;
 		&:visited {
-
+			color: white;
 		}
 		&:hover {
-
+			font-weight: bold;
 		}
 	}
 }
@@ -199,7 +200,7 @@ input, textarea {
 
 	&:focus {
 	outline: none;
-	border: 2px solid $darker-blue;
+	border-color: $light-purple;
 	}
 }
 
@@ -220,7 +221,7 @@ input[type=submit] {
 	}
 
 	&:hover {
-		background-color: $darker-blue;
+		background-color: $light-purple;
 	}
 }
 

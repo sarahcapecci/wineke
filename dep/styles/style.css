@@ -131,6 +131,14 @@ p, .benefits {
 }
 .menu a {
   text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
+.menu a:visited {
+  color: white;
+}
+.menu a:hover {
+  font-weight: bold;
 }
 
 footer {
@@ -174,7 +182,7 @@ input, textarea {
 }
 input:focus, textarea:focus {
   outline: none;
-  border: 2px solid #63c4e4;
+  border-color: #bec3db;
 }
 
 input[type=submit] {
@@ -194,7 +202,7 @@ input[type=submit]:focus {
   font-weight: bold;
 }
 input[type=submit]:hover {
-  background-color: #63c4e4;
+  background-color: #bec3db;
 }
 
 ::-webkit-input-placeholder {
