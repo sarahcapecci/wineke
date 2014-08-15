@@ -4,8 +4,14 @@ winekeWeb.config(['$routeProvider', function($routeProvider){
     var directory = "../../";
     $routeProvider
     // route for the home page
+
     .when('/home', {
         templateUrl : directory + 'home.html',
+        controller  : 'MainController'
+    })
+
+    .when('/main', {
+        templateUrl : directory + 'pages/main.html',
         controller  : 'MainController'
     })
 
