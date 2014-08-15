@@ -31,7 +31,15 @@ nav {
 }
 
 body, html {
-  height: 100%;
+  min-height: 600px;
+}
+
+.home-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .box-message {

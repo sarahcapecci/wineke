@@ -8,6 +8,7 @@ $light-purple: #bec3db;
 $light-blue-scroll: #88bfd1;
 $darker-blue-scroll: #5f8895;
 $box-text: #fcfcfe;
+$home-blue: #d3ecf8;
 
 
 .clearfix:after {
@@ -44,9 +45,67 @@ nav {
 }
 
 body, html {
-	height: 100%;
+	min-height: 600px;
 }
 
+body {
+
+}
+
+// .home {
+// 	position: absolute;
+// 	width: 15%;
+// 	padding: 2% 3%;
+// 	background-color: $home-blue;
+// 	text-decoration: none;
+// 	color: $light-purple;
+// 	cursor: pointer;
+// 	font-family: 'Lobster Two', serif;
+// 	font-size: 25px;
+// 	text-align: center;
+// }
+.home-image {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+// .home-border {
+// 	border: 2px solid white;
+// 	padding: 5px;
+// 	position: absolute;
+// }
+// .home-about {
+// 	bottom: 30%;
+// 	left: 41%;
+// 	padding: 3%;
+// 	cursor: pointer;
+// 	width: 15%;
+// 	position: relative;
+// }
+// .home-modalities {
+// 	top: 60%;
+// 	left: 10%;
+// }
+// .home-services {
+// 	top: 60%;
+// 	right: 10%;
+// }
+// .home-contact {
+// 	bottom: 15%;
+// 	right: 41%;
+
+// }
+// .home-energy {
+// 	top: 10%;
+// 	left: 10%;
+// }
+
+// .home-blog {
+// 	top: 10%;
+// 	right: 10%;
+// }
 .box-message {
 	background-color: $light-purple;
 	color: $box-text;
