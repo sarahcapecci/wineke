@@ -6,9 +6,10 @@
         <meta name="description" content="$1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Wineke Healing</title>
-        <link rel="stylesheet" href="dep/styles/style.css">
+        <link rel="stylesheet" href="styles/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+        <base href="/wineke/">
 
     </head>
     <body ng-controller="MainController">
@@ -19,15 +20,17 @@
         <a class="home home-contact" href="#contact">Contact</a>
         <a class="home-about" href="#about"></a> -->
         <nav class="cleafix">
-<!--             <a class="logo-link" href="#about"><img class="logo" src="img/logo-circle.png" alt="Wineke Healing Logo"></a> -->
+            <a ng-click="hiddenStyle = {display: 'none'}" class="logo-link" href="#about"><img class="logo" src="img/logo-circle.png" alt="Wineke Healing Logo"></a>
             <ul class="menu">
-                <li class="top"><a href="#energy-healing">Energy Healing</a></li>
-                <li class="top"><a href="#modalities">Modalities</a></li>
-                <li class="top"><a href="#services">Services</a></li>
-                <li class="bottom"><a href="#">Blog</a></li>
-                <li class="bottom"><a href="#contact">Contact</a></li>
+                <li class="top top-about"><a href="#about" ng-click="hiddenStyle = {display: 'none'}">About</a></li>
+                <li class="top"><a href="#energy-healing" ng-click="hiddenStyle = {display: 'none'}">Energy Healing</a></li>
+                <li class="top"><a href="#modalities" ng-click="hiddenStyle = {display: 'none'}">Modalities</a></li>
+                <li class="top"><a href="#services" ng-click="hiddenStyle = {display: 'none'}">Services</a></li>
+                <li class="top"><a href="https://winekehealing.wordpress.com/" target="_blank">Blog</a></li>
+                <li class="top"><a href="#contact" ng-click="hiddenStyle = {display: 'none'}">Contact</a></li>
             </ul>
         </nav>
+        <img ng-style="hiddenStyle" class="home-image" src="img/home.jpg" alt="">
      <div class="wrapper clearfix " id="main" ng-view>
 
         </div>
@@ -39,6 +42,6 @@
            <li><a href="skype:winekehealing?call"><img src="img/skype.png" alt="Skype Icon"></a></li>
             </ul>
         </footer>
-        <script src="dep/js/main-min.js"></script>
+        <script src="js/main-min.js"></script>
     </body>
 </html>

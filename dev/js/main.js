@@ -1,54 +1,59 @@
 var winekeWeb = angular.module('winekeWeb', ['ngRoute']);
 
-winekeWeb.config(['$routeProvider', function($routeProvider){
-    var directory = "../../";
+winekeWeb.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+    var directory = "../";
     $routeProvider
     // route for the home page
 
     .when('/home', {
-        templateUrl : directory + 'home.html',
-        controller  : 'MainController'
+        templateUrl : 'home.html',
+        controller  : 'MainController',
+        addThis: 'full'
     })
 
-    .when('/main', {
-        templateUrl : directory + 'pages/main.html',
-        controller  : 'MainController'
-    })
+    // .when('/main', {
+    //     templateUrl : 'pages/main.html'
+    // })
 
     // route for the about page
     .when('/about', {
-        templateUrl : directory + 'pages/about.html'
+        templateUrl : 'pages/about.html',
+        addThis: 'hidden'
     })
 
     // route for the energy-healing page
     .when('/energy-healing', {
-        templateUrl : directory + 'pages/energy.html'
+        templateUrl : 'pages/energy.html',
+        addThis: 'hidden'
     })
 
     // route for the modalities page
     .when('/modalities', {
-        templateUrl : directory + 'pages/modalities.html'
+        templateUrl : 'pages/modalities.html',
+        addThis: 'hidden'
         // controller  : 'modalitiesController'
     })
 
     // route for the services page
     .when('/services', {
-        templateUrl : directory + 'pages/services.html',
+        templateUrl : 'pages/services.html',
+        addThis: 'hidden',
         title: 'Services'
 
     })
 
     // route for the contact page
     .when('/contact', {
-        templateUrl : directory + 'pages/contact.html',
-        controller : 'ContactController'
+        templateUrl : 'pages/contact.html',
+        controller : 'ContactController',
+        addThis: 'hidden'
     });
 
     // otherwise({
     //     redirectTo: '/wineke.html'
     //   });
 
-    // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 }]);
 
 

@@ -22,7 +22,7 @@ nav li a, span {
 }
 
 nav {
-  background-image: url("../../img/nav.png");
+  background-image: url("../img/nav.png");
   min-height: 70px;
   vertical-align: middle;
   margin: 70px 0 40px 0;
@@ -90,6 +90,7 @@ p, .benefits {
   float: left;
   max-height: 100%;
   position: relative;
+  margin-top: 0.83em;
 }
 .left-image img {
   width: 100%;
@@ -152,7 +153,7 @@ p, .benefits {
 footer {
   width: 100%;
   min-height: 50px;
-  background-image: url("../../img/footer.jpg");
+  background-image: url("../img/footer.jpg");
 }
 
 .social-media {
@@ -169,6 +170,10 @@ footer {
 }
 .social-media li img {
   width: 100%;
+}
+
+li.top-about {
+  display: none;
 }
 
 #SkypeButton_Call_winekehealing_1_paraElement img {
@@ -284,7 +289,7 @@ input[type=submit]:hover {
 
   .menu {
     position: relative;
-    background-image: url("../../img/nav.png");
+    background-image: url("../img/nav.png");
     width: 100%;
   }
   .menu li {
@@ -298,8 +303,8 @@ input[type=submit]:hover {
   .menu li.top {
     width: 31%;
   }
-  .menu li.bottom {
-    width: 45%;
+  .menu li.top-about {
+    display: inline-block;
   }
 
   .left-image {
